@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{%static 'images/logo.jpg'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Home||Admin</title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/logo.jpg' %}" alt="logo" height="80px" width="80px">
+        <section class="menu">
+            <ul class="menu-list">
+                <li class="active">Home</li>
+                <li href="#">Customer</li>
+                <li href="#">Logout</li>
+            </ul>
+            <button>
+                <i class="fas fa-times"></i>
+                <i class="fas fa-bars"></i>
+            </button>
+        </section>
+    </header>
+    <section>
+        <a href="#" style="text-decoration: dashed;">
+        <h1 style="text-align: center;">View Your Customer</h1>
+        </a>
+    </section>
+    <section>
+    <table style="width:90%;margin:0 auto;" border="1">
+        <tr style="background-color:yellow;font-family:sans-serif;font-size:25px;">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email Address</th>
+            <th>Contact No.</th>
+            <th>Requirement</th>
+            <th>Delete</th>
+        </tr>
+        {% for c in cust %}
+        <tr style="background-color:lightgreen;">
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.phone}}</td>
+            <td>{{c.choose}}</td>
+            <td><a href="#">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </section>
+    <div id="madeBy">
+        <p class="name">Made With ❤️ By : <a href="https://github.com/RahulJava-1/" target="_blank" title="github.com/RahulJava-1" style="text-decoration: none;">Rahul Tripathi</a></p>
+        <p class="ui">&copy;2023 || All rights reserved</p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+	<head>
+		    <meta charset="UTF-8">
+		    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Home||GrowItUpSolutions</title>
+        <meta name="description" content="Welcome to GrowItUpSolutions, your one-stop agency for all your YouTube needs.Are you struggling to grow your YouTube channel? Do you want to take your channel to the next level and reach a wider audience?
+        Look no further than GrowItUpSolutions! Our team of experts has years of experience in helping creators like you achieve their goals on YouTube. We offer a range of services to help optimize your channel, improve your videos, and reach your ideal audience."/>
+        <meta name="author" content="ECell" />
+        <meta name="keywords" content="GrowItUpSolutions, grow, Grow Up Solutions,Grow It Up Solutions, Youtube Solutions, Growing Youtube, Solutions, GrowItUpSolutions,Youtube with GrowItUpSolutions"/>
+        <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta property="og:title" content="GrowItUpSolutions" />
+        <meta property="og:image" content="{% static 'images/logo.jpg' %}" />
+        <meta property="og:url" content="https://www.GrowItUpSolutions.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Welcome to GrowItUpSolutions, your one-stop agency for all your YouTube needs.Are you struggling to grow your YouTube channel? Do you want to take your channel to the next level and reach a wider audience?
+        Look no further than GrowItUpSolutions! Our team of experts has years of experience in helping creators like you achieve their goals on YouTube. We offer a range of services to help optimize your channel, improve your videos, and reach your ideal audience."/>
+        <meta name="twitter:title" content="GrowItUpSolutions" />
+        <meta property="twitter:url" content="https://GrowItUpSolutions.com/" />
+        <meta property="twitter:description" content="Welcome to GrowItUpSolutions, your one-stop agency for all your YouTube needs.Are you struggling to grow your YouTube channel? Do you want to take your channel to the next level and reach a wider audience?
+        Look no further than GrowItUpSolutions! Our team of experts has years of experience in helping creators like you achieve their goals on YouTube. We offer a range of services to help optimize your channel, improve your videos, and reach your ideal audience."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="icon" type="image/x-icon" href="{%static 'images/logo.jpg'%}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            $('.chkvalue').click(function(){
+              var txt = "";
+              $('.chkvalue:checked').each(function(){
+                txt +=$(this).val()+",";
+              });
+              $('#txtvalues').val(txt);
+            });
+          });
+        </script>
+        <style>
+.card{
+  display: flex;
+  flex-flow: wrap;
+}
+.card *{
+    box-sizing: border-box;
+}
+ .card-container {
+  flex: 300px;
+  margin: 30px;
+}
+.card-container .card {
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+}
+.card-container .card a {
+  padding: 30px;
+  width: 100%;
+  height: 500px;
+  border: 2px solid black;
+  background: white;
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: 0.25s ease;
+}
+.card-container .card a:hover {
+  transform: translate(-30px, -30px);
+  border-color: #5bc0eb;
+}
+.card-container .card a:hover .card--display {
+  display: none;
+}
+.card-container .card a:hover .card--hover {
+  display: block;
+}
+.card-container .card a .card--display i {
+  font-size: 35px;
+  margin-top: 10px;
+}
+.card-container .card a .card--display h2 {
+  margin: 20px 0 0;
+}
+.card-container .card a .card--hover {
+  display: none;
+}
+.card-container .card a .card--hover h2 {
+  margin: 20px 0;
+}
+.card-container .card a .card--hover p {
+  font-weight: normal;
+  line-height: 1.5;
+}
+.card-container .card a .card--hover p.link {
+  margin: 20px 0 0;
+  font-weight: bold;
+  color: #5bc0eb;
+}
+.card-container .card .card--border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: 2px dashed black;
+  z-index: -1;
+}
+.card-container .card.card--dark a {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+.card-container .card.card--dark a .card--hover .link {
+  color: #fde74c;
+}
+hr{
+  margin-top: 2rem;
+}
+        </style>
+	</head>
+
+	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+        <header>
+            <img src="{% static 'images/logo.jpg' %}" alt="logo" height="80px" width="80px"/>
+            <section class="menu">
+                <ul class="menu-list">
+                    <li class="active" href="{% url 'index' %}">Home</li>
+                    <li href="{% url 'myapp:login' %}">Login</li>
+                </ul>
+                <button>
+                    <i class="fas fa-times"></i>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </section>
+        </header>
+
+        <section class="main">
+            <section class="left">
+                <p class="title">GrowItUpSolutions</p>
+                <p class="msg">Welcome to GrowItUpSolutions, your one-stop agency for all your YouTube needs. Are you struggling to grow your YouTube channel? Do you want to take your channel to the next level and reach a wider audience? 
+                    <br/>Look no further than GrowItUpSolutions!<br/>
+                    Our team of experts has years of experience in helping creators like you achieve their goals on YouTube. We offer a range of services to help optimize your channel, improve your videos, and reach your ideal audience.
+                </p>
+                <div class="but">
+                <a href="#" id="myBtn" class="btn">
+                    <span>Click me</span>
+                    <svg width="13px" height="10px" viewBox="0 0 13 10">
+                     <path d="M1,5 L11,5"></path>
+                     <polyline points="8 1 12 5 8 9"></polyline>
+                   </svg>
+                  </a>
+                </div>
+                <!-- <button class="cta" id="myBtn">Learn More</button> -->
+            </section>
+            <section class="right">
+                <a href="{% url 'index' %}"><img src="{% static 'images/img.svg' %}" alt="Langing image"></a>
+            </section>
+        </section>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2 style="text-align: center; color: whitesmoke;">About Us</h2><hr/><br/>
+              <p style="line-height: 30px;color: antiquewhite;">At GrowItUpSolutions, we understand that every YouTube channel is unique, and that's why we offer customized solutions tailored to your specific needs.
+                <br/> We work closely with our clients to develop a strategy that aligns with their goals and objectives, and we provide ongoing support to help them achieve success.<br/>
+                Contact us today to learn more about our YouTube services and how we can help you optimize your content and grow your channel. Let's work together to take your YouTube channel to the next level!</p>
+            </div>
+          </div>
+          <h1 style="text-align: center; font-size: 40px;color: blueviolet;">Your All YouTube need is Here!!!</h1><br/>
+          <h2 style="text-align: center;font-size: 40px;">Our Services</h2>
+        <div class="card">
+        <div class="card-container"> 
+            <div class="card"><a href="#">
+                <div class="card--display"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    <img src="{% static 'images/youtube.jpg' %}"height="333px" width="300"/><hr/>
+                  <h2>YouTube Channel Optimization</h2>
+                </div>
+                <div class="card--hover">
+                  <h2>YouTube Channel Optimization</h2>
+                  <p> We help optimize your channel to improve discoverability and visibility. We analyze your channel and make recommendations to help you get more views, subscribers, and engagement.
+                </p>
+                </div></a>
+              <div class="card--border"></div>
+            </div>
+          </div>
+          <div class="card-container"> 
+            <div class="card"><a href="#">
+                <div class="card--display"><i class="fa fa-youtube"></i>
+                    <img src="{% static 'images/seo.jpg' %}" height="333px" width="300px"/><hr>
+                  <h2>Video SEO
+                </h2>
+                </div>
+                <div class="card--hover">
+                  <h2>Video SEO</h2>
+                  <p>Our video SEO service can help improve the visibility and ranking of your YouTube videos. Our team of experts will conduct keyword research, optimize your video title, description, tags, and annotations, and implement best practices for on-page SEO. By improving your video's SEO, we can help increase the number of views, engagement, and subscribers to your channel.
+                </p>
+                </div></a>
+              <div class="card--border"></div>
+            </div>
+          </div>
+          <div class="card-container"> 
+            <div class="card"><a href="#">
+                <div class="card--display"><i class="material-icons"></i>
+                    <img src="{% static 'images/thumbnail.jpg' %}"height="333px" width="300"/><hr/>
+                  <h2>Thumbnail Creation</h2>
+                </div>
+                <div class="card--hover">
+                  <h2>Thumbnail Creation</h2>
+                  <p>The thumbnail is the first thing that viewers see when browsing YouTube, and it can make or break their decision to click and watch your video. Our thumbnail creation service can help you create eye-catching, visually appealing thumbnails that attract more viewers and increase click-through rates. We'll work with you to design a thumbnail that accurately represents your content and captures viewers' attention.</p>
+                </div></a>
+              <div class="card--border"></div>
+            </div>
+          </div>
+          <div class="card-container"> 
+            <div class="card card--dark"><a href="#">
+                <div class="card--display"><i class="material-icons"></i>
+                    <img src="{% static 'images/videoediting.jpg' %}"height="333px" width="300"/><hr/>
+                  <h2>Video Editing</h2>
+                </div>
+                <div class="card--hover">
+                  <h2>Video Editing</h2>
+                  <p>Our video editing service can help you create high-quality, professional-looking videos that stand out on YouTube. We can help with everything from basic editing and color correction to more advanced techniques like motion graphics and visual effects. Whether you're looking to enhance your existing content or create new videos from scratch, our video editing team can help you achieve your goals.</p>
+                </div></a>
+              <div class="card--border"></div>
+            </div>
+          </div>
+          <div class="card-container"> 
+            <div class="card card--dark"><a href="#">
+                <div class="card--display"><i class="material-icons"></i>
+                    <img src="{% static 'images/ad.jpg' %}"height="333px" width="300"/><hr/>
+                  <h2>YouTube Ads</h2>
+                </div>
+                <div class="card--hover">
+                  <h2>YouTube Ads</h2>
+                  <p>We help you reach a wider audience with YouTube ads. Our team can create and manage ad campaigns that target your ideal audience and get your videos in front of the right people.
+                </p>
+                </div></a>
+              <div class="card--border"></div>
+            </div>
+          </div>
+          <div class="card-container"> 
+            <div class="card card--dark"><a href="#">
+                <div class="card--display"><i class="material-icons"></i>
+                    <img src="{% static 'images/analytics.jpg' %}"height="333px" width="300"/><hr/>
+                  <h2>Analytics and Reporting</h2>
+                </div>
+                <div class="card--hover">
+                  <h2>Analytics and Reporting</h2>
+                  <p>We provide regular reports and analytics to help you track your progress and understand your audience. We'll help you identify areas of improvement and make data-driven decisions to grow your channel.</p>
+                </div></a>
+              <div class="card--border"></div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="container">
+            <form method="post" action="{% url 'myapp:contact' %}">
+                {% csrf_token %}
+                   <h2>Contact Form</h2>
+                <input type="text" name="name"  id="name" pattern="[A-Z a-z]+" placeholder=" Your Name" required>
+                <input type="email" name="email"  id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" placeholder=" Email " required>
+              <input type="text" name="phone" pattern="[789][0-9]{9}"  id="phone" placeholder="Contact" required>
+              <p style="font-size: 20px;">What services are you interested in?</p>
+              <label for="Youtube"><input type="checkbox" value="YoutubeOptimization" class="chkvalue" id="Youtube">&nbsp;&nbsp;Youtube Channel Optimization</label>
+              <label for="video"><input type="checkbox" value="VideoOptimization" class="chkvalue" id="video">&nbsp;&nbsp;Video Optimization</label>
+              <label for="thumbnail"><input type="checkbox" value="ThumbnailCreation" class="chkvalue" id="thumbnail">&nbsp;&nbsp;Thumbnail Creation </label>
+              <label for="editing"><input type="checkbox" value="VideoEditing" class="chkvalue" id="editing">&nbsp;&nbsp;Video Editing</label>
+              <label for="Ads"><input type="checkbox" value="YoutubeAds" class="chkvalue" id="Ads">&nbsp;&nbsp;YouTube Ads</label>
+              <label for="analytics"><input type="checkbox" value="AnalyticsReporting" class="chkvalue" id="analytics">&nbsp;&nbsp;Analytics and Reporting</label>
+              <label for="pack1"><input type="checkbox" value="Pack1" class="chkvalue" id="pack1">&nbsp;&nbsp;Pack 1(Video Optimization, Thumbnail Creation, Video Editing)
+              </label>
+              <label for="pack2"><input type="checkbox" class="chkvalue" value="Pack2(all)" id="pack2">&nbsp;&nbsp;Pack 2(All the above services)
+              </label>
+              <input type="text" id="txtvalues" placeholder=" services " readonly name="choose"/>
+                  <button class="bg-blue text-white" type="submit" name="Submit" value="submit">Submit</button>
+            </form>
+        </div>
+    <div id="madeBy">
+        <p class="name">Made With ❤️ By : <a href="https://github.com/RahulJava-1/" target="_blank" title="github.com/RahulJava-1" style="text-decoration: none;">Rahul Tripathi</a></p>
+        <p class="ui">&copy;2023 || All rights reserved</p>
+        </div>
+    </div>
+</div>
+    <script>
+            var menu = document.querySelector('.menu');
+            var menuBtn = document.querySelector('.menu button');
+            menuBtn.addEventListener('click', () => {
+                menu.classList.toggle('opened')
+            })
+        </script>
+
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
+    
+	</body>
+</html>
